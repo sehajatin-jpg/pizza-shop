@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Checkout | Pizza</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="checkout.css">
+
+</head>
+
+
+<body>
+
+<header class="checkout_header">
+
+  <div class="checkout_nav container">
+
+    <a href="index.html" class="nav_logo">
+      🍕 Pizza
+    </a>
+
+    <a href="index.html" class="checkout_back">
+      <i class="ri-arrow-left-line"></i>
+      Back to menu
+    </a>
+
+  </div>
+
+</header>
+
+
+<main class="checkout section">
+
+  <div class="checkout_container container">
+
+    <!-- CUSTOMER INFORMATION -->
+
+    <section class="checkout_form-section">
+
+      <h1 class="checkout_title">
+        Checkout
+      </h1>
+
+
+      <form id="checkout-form">
+
+        <h2>Delivery Information</h2>
+
+
+        <div class="checkout_group">
+
+          <div>
+            <label for="name">Full Name</label>
+
+            <input
+              type="text"
+              id="name"
+              required
+              placeholder="Your name"
+            >
+          </div>
+
+
+          <div>
+            <label for="phone">Phone Number</label>
+
+            <input
+              type="tel"
+              id="phone"
+              required
+              placeholder="Phone number"
+            >
+          </div>
+
+        </div>
+
+
+        <div>
+
+          <label for="address">
+            Delivery Address
+          </label>
+
+          <textarea
+            id="address"
+            required
+            placeholder="House no., street, area"
+          ></textarea>
+
+        </div>
+
+
+        <div class="checkout_group">
+
+          <div>
+
+            <label for="city">
+              City
+            </label>
+
+            <input
+              type="text"
+              id="city"
+              required
+            >
+
+          </div>
+
+
+          <div>
+
+            <label for="pincode">
+              Pincode
+            </label>
+
+            <input
+              type="text"
+              id="pincode"
+              required
+            >
+
+          </div>
+
+        </div>
+
+
+        <h2>Payment Method</h2>
+
+
+        <div class="payment_methods">
+
+          <label class="payment_option">
+
+            <input
+              type="radio"
+              name="payment"
+              value="cod"
+              checked
+            >
+
+            <i class="ri-cash-line"></i>
+
+            Cash on Delivery
+
+          </label>
+
+
+          <label class="payment_option">
+
+            <input
+              type="radio"
+              name="payment"
+              value="upi"
+            >
+
+            <i class="ri-smartphone-line"></i>
+
+            UPI
+
+          </label>
+
+
+          <label class="payment_option">
+
+            <input
+              type="radio"
+              name="payment"
+              value="card"
+            >
+
+            <i class="ri-bank-card-line"></i>
+
+            Card
+
+          </label>
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="button place_order"
+        >
+
+          Place Order
+
+        </button>
+
+      </form>
+
+    </section>
+
+
+
+    <!-- ORDER SUMMARY -->
+
+    <section class="order_summary">
+
+      <h2>
+        Your Order
+      </h2>
+
+
+      <div
+        id="checkout-products"
+        class="checkout_products"
+      ></div>
+
+
+      <div class="checkout_prices">
+
+        <div>
+
+          <span>Subtotal</span>
+
+          <span id="checkout-subtotal">
+            $0
+          </span>
+
+        </div>
+
+
+        <div>
+
+          <span>Delivery</span>
+
+          <span>
+            $2
+          </span>
+
+        </div>
+
+
+        <div class="checkout_total">
+
+          <span>Total</span>
+
+          <span id="checkout-total">
+            $0
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+</main>
+
+
+<script src="checkout.js"></script>
+
+</body>
+
+</html>
